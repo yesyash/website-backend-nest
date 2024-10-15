@@ -13,11 +13,11 @@ export class ApiConfigService {
   ) {}
 
   getPort(): number {
-    return this.cnConfig.port;
+    return this.cnConfig.PORT;
   }
 
   isProd(): boolean {
-    return this.cnConfig.env === EnvironmentEnum.PRODUCTION;
+    return this.cnConfig.ENV === EnvironmentEnum.PRODUCTION;
   }
 
   githubClientId(): string {

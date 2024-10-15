@@ -10,18 +10,18 @@ export enum EnvironmentEnum {
 
 export class CommonConfig {
   @IsEnum(EnvironmentEnum)
-  env: EnvironmentEnum;
+  ENV: EnvironmentEnum;
 
   @IsNumber()
   @Min(0)
   @Max(65535)
-  port: number;
+  PORT: number;
 }
 
 export default registerAs('common', () => {
   const config = {
-    env: process.env.env,
-    port: process.env.port,
+    ENV: process.env.ENV,
+    PORT: process.env.PORT,
   };
 
   return validateEnv(CommonConfig, config);
