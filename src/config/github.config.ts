@@ -14,8 +14,8 @@ export class GithubConfig {
 
 export default registerAs('github', () => {
   const config = {
-    clientId: process.env.github_clientId,
-    clientSecret: process.env.github_clientSecret,
+    clientId: process.env.GITHUB_CLIENT_ID,
+    clientSecret: process.env.GITHUB_CLIENT_SECRET,
   };
 
   return validateEnv(GithubConfig, config);
